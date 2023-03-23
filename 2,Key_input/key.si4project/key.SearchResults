@@ -1,0 +1,16 @@
+---- IOPORT_OPEN Matches (15 in 1 files) ----
+r_ioport.c (ra\fsp\src\r_ioport) line 34 : #define IOPORT_OPEN                       (0x504F5254U)
+R_IOPORT_Open in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN != p_instance_ctrl->open, FSP_ERR_ALREADY_OPEN);
+R_IOPORT_Open in r_ioport.c (ra\fsp\src\r_ioport) :     p_instance_ctrl->open = IOPORT_OPEN;
+R_IOPORT_Close in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinsCfg in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinCfg in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinRead in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PortRead in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PortWrite in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinWrite in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PortDirectionSet in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PortEventInputRead in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinEventInputRead in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PortEventOutputWrite in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
+R_IOPORT_PinEventOutputWrite in r_ioport.c (ra\fsp\src\r_ioport) :     FSP_ERROR_RETURN(IOPORT_OPEN == p_instance_ctrl->open, FSP_ERR_NOT_OPEN);
