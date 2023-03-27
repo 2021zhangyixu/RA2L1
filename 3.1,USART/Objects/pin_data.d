@@ -1,4 +1,4 @@
-./objects/pin_data.o: F:\RS\project\3,USART_HC-25\ra_gen\pin_data.c \
+./objects/pin_data.o: F:\RS\project\3.1,USART\ra_gen\pin_data.c \
   ra\fsp\inc\api\bsp_api.h ra\fsp\inc\fsp_common_api.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\assert.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\stdint.h \

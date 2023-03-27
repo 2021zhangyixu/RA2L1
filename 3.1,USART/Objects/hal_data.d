@@ -1,4 +1,4 @@
-./objects/hal_data.o: F:\RS\project\3,USART_HC-25\ra_gen\hal_data.c \
+./objects/hal_data.o: F:\RS\project\3.1,USART\ra_gen\hal_data.c \
   ra_gen\hal_data.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ra\fsp\inc\api\bsp_api.h ra\fsp\inc\fsp_common_api.h \

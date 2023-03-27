@@ -1,3 +1,9 @@
+/*******
+作者：CSDN：风正豪，ID：qq_63922192
+博客主页:https://blog.csdn.net/qq_63922192
+声明：无版权限制，如果觉得有用，请关注C站风正豪
+******/
+
 #include "hal_data.h"
 #include "led.h"
 #include "usart9.h"
@@ -14,8 +20,10 @@ FSP_CPP_FOOTER
 void hal_entry(void)
 {
     /* TODO: add your own code here */
+		//串口9初始化
 		UART9_Init();
-	  printf("hello world\n");
+		//开机发送
+		printf("CSDN:qq_63922192\n");
 		while(1)
 		{
 			led_1_flicker();

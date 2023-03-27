@@ -1,5 +1,5 @@
 ./objects/bsp_irq.o: \
-  F:\RS\project\3,USART_HC-25\ra\fsp\src\bsp\mcu\all\bsp_irq.c \
+  F:\RS\project\3.1,USART\ra\fsp\src\bsp\mcu\all\bsp_irq.c \
   ra\fsp\inc\api\bsp_api.h ra\fsp\inc\fsp_common_api.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\assert.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\stdint.h \
@@ -27,7 +27,7 @@
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\keil\Keil5\ C51\ARM\ARMCLANG\Bin\..\include\string.h \
   ra\fsp\inc\api\..\..\inc\fsp_common_api.h \
-  F:\RS\project\3,USART_HC-25\ra\fsp\src\bsp\mcu\all\bsp_compiler_support.h \
+  F:\RS\project\3.1,USART\ra\fsp\src\bsp\mcu\all\bsp_compiler_support.h \
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_register_protection.h \
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_irq.h \
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_io.h \
