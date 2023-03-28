@@ -16,8 +16,8 @@ void UART9_Init(void)
 }
 
 
-volatile bool uart_send_complete_flag = false;// 发送完成标志
-uint8_t USART_RX_BUF[USART_REC_LEN] = "Receive:";     //接收缓冲,最大USART_REC_LEN个字节.起始字母为Receive:
+volatile bool uart_send_complete_flag = false;          // 发送完成标志
+uint8_t USART_RX_BUF[USART_REC_LEN] = First_String;     //接收缓冲,最大USART_REC_LEN个字节.起始字符串为First_String的宏定义
 
 /*
 
@@ -30,7 +30,7 @@ uint8_t USART_RX_BUF[USART_REC_LEN] = "Receive:";     //接收缓冲,最大USART_REC_L
   =============================================================================================================
 
 */
-uint16_t USART_RX_STA=8;       //接收状态标记，因为Receive:有8个字符，所以这里写入8	  
+uint16_t USART_RX_STA = First_String_num;       //接收状态标记，根据起始字符串来初始化起始字符位置
 
 void UART_Agreement(uart_callback_args_t * p_args); //串口通讯协议
 
@@ -52,7 +52,7 @@ void UART9_callback(uart_callback_args_t * p_args)
 				USART_RX_BUF[USART_RX_STA&0x3FFF] = 0x0d;//将字符串自动换行
 				USART_RX_STA++;                          //因为增加了0x0d，所以字符串数量+1
 				R_SCI_UART_Write(&g_uart9_ctrl, (uint8_t*)USART_RX_BUF, USART_RX_STA&0x3fff);//将字符串数据输出
-				USART_RX_STA=8;                          //将USART_RX_STA初始化
+				USART_RX_STA=First_String_num;                          //将USART_RX_STA初始化
 			}
 			break;
 		}
@@ -100,7 +100,7 @@ int _write(int fd, char *pBuffer, int size); //防止编译警告
 int _write(int fd, char *pBuffer, int size)
 {
 	(void)fd;
-	R_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)pBuffer, (uint32_t)size);
+	R_SCI_UART_Write(&g_uartx_ctrl, (uint8_t *)pBuffer, (uint32_t)size);
 	while(uart_send_complete_flag == false);
 	uart_send_complete_flag = false;
 	return size;
@@ -109,7 +109,7 @@ int _write(int fd, char *pBuffer, int size)
 int fputc(int ch, FILE *f)
 {
 	(void)f;
-	R_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)&ch, 1);
+	R_SCI_UART_Write(&g_uartx_ctrl, (uint8_t *)&ch, 1);
 	while(uart_send_complete_flag == false);
 	uart_send_complete_flag = false;
 	return ch;
